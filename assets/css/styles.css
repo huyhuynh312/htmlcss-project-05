@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #7264d6;
+    --second-primary-color: #212832;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    overscroll-behavior: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Open Sans", sans-serif;
+    background: #fff;
+}
+
+/* Common */
+a {
+    text-decoration: none;
+}
+
+a,
+input,
+textarea,
+select,
+button,
+article {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
