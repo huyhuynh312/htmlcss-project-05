@@ -5,6 +5,7 @@
 :root {
     --primary-color: #7264d6;
     --second-primary-color: #212832;
+    --third-primary-color: #696d76;
 }
 
 html,
@@ -38,4 +39,112 @@ article {
     font-size: inherit;
     color: inherit;
     -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    text-align: center;
+    --height: 58px;
+    min-width: 149px;
+    height: var(--height);
+    line-height: var(--height);
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    background: var(--second-primary-color);
+    transition: 0.25s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn--primary {
+    background: var(--primary-color);
+}
+
+/* Header */
+.header {
+    padding: 42px 0 10px;
+}
+
+.header.header__fixed {
+    position: sticky;
+    top: -16px;
+    z-index: 10;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__list {
+    margin-left: 70px;
+    display: flex;
+}
+
+.navbar__link {
+    padding: 8px 24px;
+    font-size: 1.6rem;
+    line-height: 1.75;
+    color: var(--third-primary-color);
+    transition: 0.25s;
+}
+
+.navbar__link:hover {
+    color: #212832;
+    text-shadow: 0.5px 0 0 currentColor;
+}
+
+.navbar__link--active {
+    position: relative;
+    color: var(--second-primary-color);
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.75;
+}
+
+.navbar__link--active::after {
+    position: absolute;
+    content: "";
+    display: block;
+    left: 24px;
+    bottom: 5px;
+    width: 47px;
+    height: 1px;
+    border-radius: 1px;
+    background: var(--primary-color);
+}
+
+.header__cta {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.header__log-in {
+    display: inline-block;
+    padding: 8px 28px;
+    color: var(--second-primary-color);
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.75;
+    transition: 0.25s;
+}
+
+.header__log-in:hover {
+    color: var(--primary-color);
+}
+
+.header__sign-up {
+    --height: 52px;
+    min-width: 113px;
 }
