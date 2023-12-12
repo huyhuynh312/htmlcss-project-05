@@ -187,15 +187,17 @@ article {
 
 .hero__title,
 .work__title,
-.feature__title {
+.feature__title,
+.client__title {
     position: relative;
+    display: inline-flex;
 }
 
 .hero__title::before,
 .work__title::before,
-.feature__title::before {
+.feature__title::before,
+.client__title::before {
     position: absolute;
-    display: block;
     content: "";
     top: 50%;
     transform: translateX(-50%);
@@ -832,4 +834,134 @@ article {
     border-radius: 90px;
     background: var(--primary-color);
     box-shadow: 0px 15px 40px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* Client */
+.client {
+    padding-top: 160px;
+}
+
+/* Client top */
+.client-top {
+    text-align: center;
+}
+
+.client__desc {
+    margin: 18px auto 0;
+    width: 435px;
+    font-size: 1.6rem;
+    line-height: 1.75;
+}
+
+.client__list {
+    margin-top: 70px;
+    display: flex;
+    overflow: hidden;
+    gap: 30px;
+}
+
+/* Client item */
+.client-item {
+    width: 50%;
+}
+
+.client-item__comment {
+    position: relative;
+    width: 570px;
+    padding: 42px 28px;
+    border: 1px solid #dfe2e8;
+    border-radius: 10px;
+}
+
+.client-item__comment:hover {
+    box-shadow: 0px 22px 54px 0px rgba(0, 0, 0, 0.07);
+}
+
+.client-item__comment::after {
+    position: absolute;
+    content: "";
+    bottom: -37px;
+    left: 50%;
+    width: 72px;
+    height: 72px;
+    transform: translateX(-50%) rotate(45deg);
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent #dfe2e8 #dfe2e8 transparent;
+    border-bottom-right-radius: 5px;
+    background: #fff;
+}
+
+.client-item__desc {
+    color: var(--third-primary-color);
+    text-align: center;
+    font-size: 2.2rem;
+    font-style: italic;
+    line-height: 1.55;
+}
+
+.client-item__avatar {
+    margin-top: 96px;
+    text-align: center;
+}
+
+.client-item__img {
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    background: #1a0616;
+    overflow: hidden;
+}
+
+.client-item:nth-child(odd) .client-item__img {
+    background: #4ab5e3;
+}
+
+.client-item:nth-child(even) .client-item__img {
+    background: #439f90;
+}
+
+.client-item__thumb {
+    display: block;
+    width: 100%;
+}
+
+.client-item__name {
+    margin-top: 20px;
+    color: #070052;
+    font-size: 2.6rem;
+    font-weight: 600;
+    line-height: 1.38;
+}
+
+.client-item__work {
+    margin-top: 2px;
+}
+
+/* Client dots */
+.client__dots {
+    margin-top: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.client__dot {
+    width: 22px;
+    height: 6px;
+    border-radius: 1px;
+    border: 1px solid #9b9fab;
+}
+
+.client__dot:hover {
+    cursor: pointer;
+}
+
+.client__dot--active {
+    cursor: none;
+    background: var(--primary-color);
 }
