@@ -91,6 +91,26 @@ article {
     line-height: 1.67;
 }
 
+.hero__title,
+.work__title,
+.feature__title,
+.client__title,
+.blog__title {
+    position: relative;
+    display: inline-flex;
+}
+
+.section-title::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    transform: translateX(-50%);
+    left: -21px;
+    width: 18px;
+    height: 2px;
+    background: #696d77;
+}
+
 /* Header */
 .header {
     padding: 42px 0 6px;
@@ -183,28 +203,6 @@ article {
 
 .hero-left {
     width: 47%;
-}
-
-.hero__title,
-.work__title,
-.feature__title,
-.client__title {
-    position: relative;
-    display: inline-flex;
-}
-
-.hero__title::before,
-.work__title::before,
-.feature__title::before,
-.client__title::before {
-    position: absolute;
-    content: "";
-    top: 50%;
-    transform: translateX(-50%);
-    left: -21px;
-    width: 18px;
-    height: 2px;
-    background: #696d77;
 }
 
 .hero__heading {
@@ -964,4 +962,95 @@ article {
 .client__dot--active {
     cursor: none;
     background: var(--primary-color);
+}
+
+/* Blog */
+.blog {
+    padding-top: 160px;
+}
+
+.blog-top__row {
+    width: 435px;
+}
+
+.blog-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blog__heading {
+    margin-top: 6px;
+}
+
+.blog__desc {
+    margin-top: 18px;
+    font-size: 1.6rem;
+    line-height: 1.75;
+}
+
+.blog__btn {
+    min-width: 123px;
+}
+
+.blog__list {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* Blog item */
+.blog-item {
+    padding: 28px 0 28px 28px;
+    border-radius: 12px;
+    border: 1px solid #dfe2e8;
+    background: #fff;
+}
+
+.blog-item:hover {
+    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.07);
+}
+
+.blog-item__wrap {
+    display: flex;
+    align-items: center;
+}
+
+.blog-item__img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+}
+
+.blog-item__info {
+    padding: 10px 22px;
+}
+
+.blog-item__title {
+    color: #696d77;
+    font-size: 1.4rem;
+    line-height: 1.75;
+}
+
+.blog-item__heading {
+    margin-top: 10px;
+    width: 332px;
+    color: var(--second-primary-color);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67;
+}
+
+.blog-item__link {
+    display: block;
+    margin-top: 20px;
+    color: var(--third-primary-color);
+    font-size: 1.6rem;
+    line-height: 1.63;
+}
+
+.blog-item__link:hover {
+    color: var(--primary-color);
 }
