@@ -95,7 +95,8 @@ article {
 .work__title,
 .feature__title,
 .client__title,
-.blog__title {
+.blog__title,
+.app__title {
     position: relative;
     display: inline-flex;
 }
@@ -1053,4 +1054,75 @@ article {
 
 .blog-item__link:hover {
     color: var(--primary-color);
+}
+
+/* App */
+.app {
+    padding: 160px 0 100px;
+}
+
+.app__inner {
+    position: relative;
+    padding: 100px 0;
+    text-align: center;
+    border-radius: 24px;
+    background: var(--primary-color);
+}
+
+.app__title,
+.app__heading,
+.app__desc {
+    color: #fff;
+}
+
+.app__title::before {
+    background: #fff;
+}
+
+.app__desc {
+    width: 435px;
+    margin: 18px auto;
+    font-size: 1.6rem;
+}
+
+.app__download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 16px;
+    margin-top: 38px;
+}
+
+.app__download-img {
+    width: 100%;
+    display: block;
+}
+
+.app__download-img:hover {
+    opacity: 0.9;
+}
+
+/* App decoration */
+.app__decor-img {
+    position: absolute;
+}
+
+.app__decor-img:nth-child(1) {
+    top: 49px;
+    left: 112px;
+}
+
+.app__decor-img:nth-child(2) {
+    top: 49px;
+    right: 112px;
+}
+
+.app__decor-img:nth-child(3) {
+    bottom: 49px;
+    left: 166px;
+}
+
+.app__decor-img:nth-child(4) {
+    bottom: 49px;
+    right: 166px;
 }
