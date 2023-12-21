@@ -552,7 +552,7 @@ article {
 .work-media::after {
     position: absolute;
     content: url(../img/work-bg.svg);
-    inset: auto auto 0 0;
+    inset: auto auto -2px 0;
     z-index: -1;
 }
 
@@ -562,6 +562,8 @@ article {
     content: url(../img/work-decor.svg);
     top: 76px;
     right: 62px;
+    z-index: 1;
+    animation: pulse 1s infinite;
 }
 
 .work__img {
@@ -1003,26 +1005,35 @@ article {
 
 /* Blog item */
 .blog-item {
+    display: flex;
+    align-items: center;
     padding: 28px 0 28px 28px;
     border-radius: 12px;
     border: 1px solid #dfe2e8;
     background: #fff;
+    transition: 0.25s;
 }
 
 .blog-item:hover {
     box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.07);
 }
 
-.blog-item__wrap {
-    display: flex;
-    align-items: center;
+.blog-item:hover .blog-item__img {
+    transform: scale(1.1);
+}
+
+.blog-item__media {
+    overflow: hidden;
+    border-radius: 12px;
+    transition: 0.25s;
 }
 
 .blog-item__img {
+    display: block;
     width: 160px;
     height: 160px;
     object-fit: cover;
-    display: block;
+    border-radius: inherit;
 }
 
 .blog-item__info {
@@ -1042,6 +1053,11 @@ article {
     font-size: 1.8rem;
     font-weight: 600;
     line-height: 1.67;
+    transition: 0.25s;
+}
+
+.blog-item__heading:hover {
+    color: var(--primary-color);
 }
 
 .blog-item__link {
@@ -1105,6 +1121,7 @@ article {
 /* App decoration */
 .app__decor-img {
     position: absolute;
+    animation: zoomIn 2s infinite alternate;
 }
 
 .app__decor-img:nth-child(1) {
@@ -1125,6 +1142,16 @@ article {
 .app__decor-img:nth-child(4) {
     bottom: 49px;
     right: 166px;
+}
+
+@keyframes spiner {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: 360deg;
+    }
 }
 
 /* Footer */
@@ -1170,6 +1197,11 @@ article {
     padding: 8px 0;
 }
 
+.footer__link:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
 .footer__desc {
     width: 371px;
 }
@@ -1211,9 +1243,13 @@ article {
 }
 
 /* Footer contact */
-.footer__mail,
-.footer__phone {
+.footer__contact-link {
     color: #6a6e78;
+    transition: 0.25s;
+}
+
+.footer__contact-link:hover {
+    color: var(--primary-color);
     text-decoration-line: underline;
 }
 
